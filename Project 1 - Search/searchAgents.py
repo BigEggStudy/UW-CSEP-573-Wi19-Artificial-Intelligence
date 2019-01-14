@@ -296,10 +296,7 @@ class CornersProblem(search.SearchProblem):
         space)
         """
         "*** YOUR CODE HERE ***"
-        foodStatus = {}
-        for corner in self.corners:
-            foodStatus[corner] = True
-        return (self.startingPosition, foodStatus)
+        return (self.startingPosition, self.corners)
 
     def isGoalState(self, state):
         """
@@ -307,9 +304,7 @@ class CornersProblem(search.SearchProblem):
         """
         "*** YOUR CODE HERE ***"
         position, foodStatus = state
-        if True in foodStatus.values():
-            return False
-        return True
+        return len(list(foodStatus)) == 0
 
     def getSuccessors(self, state):
         """
@@ -340,10 +335,10 @@ class CornersProblem(search.SearchProblem):
                 nextPosition = (nextx, nexty)
                 cost = self.costFn(nextPosition)
 
-                nextFoodStatus = foodStatus.copy()
-                if nextPosition in self.corners:
-                    nextFoodStatus[nextPosition] = False
-                successors.append(((nextPosition, nextFoodStatus), action, cost))
+                nextFoodStatus = list(foodStatus).copy()
+                if nextPosition in self.corners and nextPosition in nextFoodStatus:
+                    nextFoodStatus.remove(nextPosition)
+                successors.append(((nextPosition, tuple(nextFoodStatus)), action, cost))
 
         self._expanded += 1 # DO NOT CHANGE
         return successors
