@@ -356,7 +356,6 @@ class CornersProblem(search.SearchProblem):
             if self.walls[x][y]: return 999999
         return len(actions)
 
-
 def cornersHeuristic(state, problem):
     """
     A heuristic for the CornersProblem that you defined.
@@ -481,7 +480,9 @@ def foodHeuristic(state, problem):
     "*** YOUR CODE HERE ***"
     heuristic = 0
     for foodPosition in foodGrid.asList():
-        heuristic += util.manhattanDistance(position, foodPosition)
+        distance = mazeDistance(position, foodPosition, problem.startingGameState)
+        if distance > heuristic:
+            heuristic = distance
     return heuristic
 
 class ClosestDotSearchAgent(SearchAgent):
