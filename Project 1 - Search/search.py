@@ -89,20 +89,18 @@ def depthFirstSearch(problem):
     "*** YOUR CODE HERE ***"
     stack = util.Stack()
     stack.push((problem.getStartState(), []))
-
     visited = list()
-    visited.append(problem.getStartState())
 
     while not stack.isEmpty():
         currentState, steps = stack.pop()
+        if currentState in visited:
+            continue
         if problem.isGoalState(currentState):
             return steps
 
+        visited.append(currentState)
         for state, action, cost in problem.getSuccessors(currentState):
-            if state in visited:
-                continue
             stack.push((state, steps + [ action ]))
-            visited.append(state)
 
     return []
 
@@ -111,20 +109,18 @@ def breadthFirstSearch(problem):
     "*** YOUR CODE HERE ***"
     queue = util.Queue()
     queue.push((problem.getStartState(), []))
-
     visited = list()
-    visited.append(problem.getStartState())
 
     while not queue.isEmpty():
         currentState, steps = queue.pop()
+        if currentState in visited:
+            continue
         if problem.isGoalState(currentState):
             return steps
 
+        visited.append(currentState)
         for state, action, cost in problem.getSuccessors(currentState):
-            if state in visited:
-                continue
             queue.push((state, steps + [ action ]))
-            visited.append(state)
 
     return []
 
@@ -133,20 +129,18 @@ def uniformCostSearch(problem):
     "*** YOUR CODE HERE ***"
     queue = util.PriorityQueue()
     queue.push((problem.getStartState(), [], 0), 0)
-
     visited = list()
-    visited.append(problem.getStartState())
 
     while not queue.isEmpty():
         currentState, steps, existedCost = queue.pop()
+        if currentState in visited:
+            continue
         if problem.isGoalState(currentState):
             return steps
 
+        visited.append(currentState)
         for state, action, cost in problem.getSuccessors(currentState):
-            if state in visited:
-                continue
             queue.push((state, steps + [ action ], existedCost + cost), existedCost + cost)
-            visited.append(state)
 
     return []
 
@@ -162,20 +156,18 @@ def aStarSearch(problem, heuristic=nullHeuristic):
     "*** YOUR CODE HERE ***"
     queue = util.PriorityQueue()
     queue.push((problem.getStartState(), [], 0), 0)
-
-    visited = list()
-    visited.append(problem.getStartState())
+    visited = dict()
 
     while not queue.isEmpty():
         currentState, steps, existedCost = queue.pop()
+        if currentState in visited and visited[currentState] <= existedCost:
+            continue
         if problem.isGoalState(currentState):
             return steps
 
+        visited[currentState] = existedCost
         for state, action, cost in problem.getSuccessors(currentState):
-            if state in visited:
-                continue
-            queue.push((state, steps + [ action ], existedCost + cost + heuristic(state, problem)), existedCost + cost + heuristic(state, problem))
-            visited.append(state)
+            queue.push((state, steps + [ action ], existedCost + cost), existedCost + cost + heuristic(state, problem))
 
     return []
 
