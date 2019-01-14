@@ -376,9 +376,15 @@ def cornersHeuristic(state, problem):
     "*** YOUR CODE HERE ***"
     position, foodStatus = state
     heuristic = 0
-    for corner in corners:
-        if foodStatus[corner]:
-            heuristic += util.manhattanDistance(position, corner)
+    unvisited = []
+    for corner in foodStatus:
+        unvisited.append(corner)
+    while unvisited:
+        distance, corner = min([(util.manhattanDistance(position, corner), corner) for corner in unvisited])
+        heuristic += distance
+        position = corner
+        unvisited.remove(corner)
+
     return heuristic
 
 class AStarCornersAgent(SearchAgent):
