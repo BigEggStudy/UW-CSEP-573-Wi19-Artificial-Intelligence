@@ -2,15 +2,15 @@
 
 ## Environment
 
-* Python 3.6.8
 * Windows 10
+* [Python 3.6.8](https://www.python.org/downloads/release/python-368/)
 
 ## Assignment 1 - Search
 
-Provisional grades from autograder.py
+Provisional grades from [autograder.py](./Assignment1-Search/autograder.py)
 
 | Index | Name | Score |
-| ----- | ---- | ----- |
+| :----:| ---- | :---: |
 | q1 | Finding a Fixed Food Dot using Depth First Search | 3/3 |
 | q2 | Breadth First Search | 3/3 |
 | q3 | Varying the Cost Function | 3/3 |
