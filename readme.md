@@ -5,9 +5,9 @@
 * Windows 10
 * [Python 3.6.8](https://www.python.org/downloads/release/python-368/)
 
-## Assignment 1 - Search
+## Project 1 - Search
 
-Provisional grades from [autograder.py](./Assignment1-Search/autograder.py)
+Provisional grades from [autograder.py](./Project1-Search/autograder.py)
 
 | Index | Name | Score |
 | :----:| ---- | :---: |
