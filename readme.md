@@ -11,11 +11,11 @@ Provisional grades from [autograder.py](./Project1-Search/autograder.py)
 
 | Index | Name | Score |
 | :----:| ---- | :---: |
-| q1 | Finding a Fixed Food Dot using Depth First Search | 3/3 |
-| q2 | Breadth First Search | 3/3 |
-| q3 | Varying the Cost Function | 3/3 |
-| q4 | A* search | 3/3 |
-| q5 | Finding All the Corners | 3/3 |
-| q6 | Corners Problem: Heuristic | 3/3 |
-| q7 | Eating All The Dots | 5/4 |
-| q8 | Suboptimal Search | 3/3 |
+| [q1](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/1) | Finding a Fixed Food Dot using Depth First Search | 3/3 |
+| [q2](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/2) | Breadth First Search | 3/3 |
+| [q3](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/3) | Varying the Cost Function | 3/3 |
+| [q4](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/4) | A* search | 3/3 |
+| [q5](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/5) | Finding All the Corners | 3/3 |
+| [q6](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/6) | Corners Problem: Heuristic | 3/3 |
+| [q7](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/7) | Eating All The Dots | 5/4 |
+| [q8](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/8) | Suboptimal Search | 3/3 |
