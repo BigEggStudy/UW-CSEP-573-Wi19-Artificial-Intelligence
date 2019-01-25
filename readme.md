@@ -19,3 +19,15 @@ Provisional grades from [autograder.py](./Project1-Search/autograder.py)
 | [q6](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/6) | Corners Problem: Heuristic | 3/3 |
 | [q7](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/7) | Eating All The Dots | 5/4 |
 | [q8](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/8) | Suboptimal Search | 3/3 |
+
+## Project 2 - Multi-Agent Search
+
+Provisional grades from [autograder.py](./Project2-MultiAgentSearch/autograder.py)
+
+| Index | Name | Score |
+| :----:| ---- | :---: |
+| [q1](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/9) | Reflex Agent | 0/4 |
+| [q2](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/10) | Minimax | 0/5 |
+| [q3](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/11) | Alpha-Beta Pruning | 0/5 |
+| [q4](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/12) | Expectimax | 0/5 |
+| [q5](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/13) | Evaluation Function | 0/6 |
