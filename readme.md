@@ -26,8 +26,8 @@ Provisional grades from [autograder.py](./Project2-MultiAgentSearch/autograder.p
 
 | Index | Name | Score |
 | :----:| ---- | :---: |
-| [q1](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/9) | Reflex Agent | 0/4 |
-| [q2](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/10) | Minimax | 0/5 |
-| [q3](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/11) | Alpha-Beta Pruning | 0/5 |
-| [q4](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/12) | Expectimax | 0/5 |
-| [q5](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/13) | Evaluation Function | 0/6 |
+| [q1](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/9) | Reflex Agent | 4/4 |
+| [q2](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/10) | Minimax | 5/5 |
+| [q3](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/11) | Alpha-Beta Pruning | 5/5 |
+| [q4](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/12) | Expectimax | 5/5 |
+| [q5](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/13) | Evaluation Function | 6/6 |
