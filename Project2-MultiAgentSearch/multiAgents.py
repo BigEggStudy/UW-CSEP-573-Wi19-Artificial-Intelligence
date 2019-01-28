@@ -296,6 +296,7 @@ class ExpectimaxAgent(MultiAgentSearchAgent):
             return ('None', self.evaluationFunction(gameState))
 
         bestScore = float('-inf')
+        bestAction = 'Stop'
         actions = gameState.getLegalActions(0)
         for action in actions:
             state = gameState.generateSuccessor(0, action)
@@ -335,7 +336,68 @@ def betterEvaluationFunction(currentGameState):
     DESCRIPTION: <write something here so we know what you did>
     """
     "*** YOUR CODE HERE ***"
-    util.raiseNotDefined()
+    # util.raiseNotDefined()
+    if currentGameState.isWin():
+        return float('inf')
+    elif currentGameState.isLose():
+        return float('-inf')
+
+    foodList = currentGameState.getFood().asList()
+    ghostStates = currentGameState.getGhostStates()
+    capsuleList = currentGameState.getCapsules()
+    pacmanPos = currentGameState.getPacmanPosition()
+    currentScore = currentGameState.getScore()
+
+    foodCount = len(foodList)
+    capsuleCount = len(capsuleList)
+
+    distanceToCapsules = [manhattanDistance(capsuleplace, pacmanPos) for capsuleplace in capsuleList]
+    if len(distanceToCapsules) > 0:
+        distToClosestCapsuleplace = min(distanceToCapsules)
+    else:
+        distToClosestCapsuleplace = float('inf')
+
+    distanceToFood = [manhattanDistance(food, pacmanPos) for food in foodList]
+    if len(distanceToFood) > 0:
+        distToClosestFood = min(distanceToFood)
+        averageDistToFood = sum(distanceToFood) / len(distanceToFood)
+        distToFurestFood = max(distanceToFood)
+    else:
+        distToClosestFood = 0
+        averageDistToFood = 0
+        distToFurestFood = 0
+
+    distanceToGhost = [manhattanDistance(ghostState.getPosition(), pacmanPos) for ghostState in ghostStates if ghostState.scaredTimer == 0]
+    if len(distanceToGhost) > 0:
+        minDistanceToGhost = min(distanceToGhost)
+    else:
+        minDistanceToGhost = float('inf')
+
+    distanceToScaredGhost = [manhattanDistance(ghostState.getPosition(), pacmanPos) for ghostState in ghostStates if ghostState.scaredTimer > 0]
+    if len(distanceToScaredGhost) > 0:
+        minDistanceToScaredGhost = min(distanceToScaredGhost)
+    else:
+        minDistanceToScaredGhost = float('inf')
+
+    # if len(distanceToFood) == 1:
+    #     print('================')
+    #     print('foodCount: ', -500  * foodCount)
+    #     print('capsuleCount: ', -1000 * capsuleCount)
+    #     print('currentScore: ', 1     * currentScore)
+    #     print('distToClosestFood: ', 50    * (1 / distToClosestFood))
+    #     print('averageDistToFood: ', 20    * (1 / averageDistToFood))
+    #     print('distToFurestFood: ', 20    * (1 / distToFurestFood))
+    #     print('distToClosestCapsuleplace: ', 25    * (1 / distToClosestCapsuleplace))
+    #     print('minDistanceToGhost: ', -200  * (1 / minDistanceToGhost))
+    #     print('minDistanceToScaredGhost: ', 100   * (1 / minDistanceToScaredGhost))
+
+    return -500  * foodCount + \
+           -1000 * capsuleCount + \
+           1     * currentScore + \
+           50    * (1 / distToClosestFood) + \
+           25    * (1 / distToClosestCapsuleplace) + \
+           -200  * (1 / minDistanceToGhost) + \
+           100   * (1 / minDistanceToScaredGhost)
 
 # Abbreviation
 better = betterEvaluationFunction
