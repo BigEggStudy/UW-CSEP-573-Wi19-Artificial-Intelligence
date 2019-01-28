@@ -4,7 +4,7 @@
 # educational purposes provided that (1) you do not distribute or publish
 # solutions, (2) you retain this notice, and (3) you provide clear
 # attribution to UC Berkeley, including a link to http://ai.berkeley.edu.
-# 
+#
 # Attribution Information: The Pacman AI projects were developed at UC Berkeley.
 # The core projects and autograders were primarily created by John DeNero
 # (denero@cs.berkeley.edu) and Dan Klein (klein@cs.berkeley.edu).
@@ -74,7 +74,42 @@ class ReflexAgent(Agent):
         newScaredTimes = [ghostState.scaredTimer for ghostState in newGhostStates]
 
         "*** YOUR CODE HERE ***"
-        return successorGameState.getScore()
+        if action == 'Stop':
+            return -float('inf')
+        if successorGameState.isWin():
+            return float('inf')
+
+        oldFood = currentGameState.getFood()
+        oldGhostStates = currentGameState.getGhostStates()
+
+        capsuleplaces = currentGameState.getCapsules()
+        score = -len(newFood.asList()) - len(capsuleplaces) * 5
+
+        if (currentGameState.getNumFood() > successorGameState.getNumFood()):
+            score += 100
+        if successorGameState.getPacmanPosition() in capsuleplaces:
+            score += 120
+
+        capsuleplaceDist = [manhattanDistance(capsuleplace, newPos) for capsuleplace in capsuleplaces]
+        distToClosestCapsuleplace = min(capsuleplaceDist) if len(capsuleplaceDist) > 0 else 0
+        score += 10 / max(distToClosestCapsuleplace, 1)
+
+        foodDist = [manhattanDistance(food, newPos) for food in newFood.asList()]
+        distToClosestFood = min(foodDist)
+        score += 10 / max(distToClosestFood, 1)
+        foodDist = [manhattanDistance(food, newPos) for food in oldFood.asList()]
+        distToClosestFood = min(foodDist)
+        score += 8 / max(distToClosestFood, 1)
+        averageDistToFood = sum(foodDist) / len(foodDist)
+        score += 3 / max(averageDistToFood, 1)
+        distToFurestFood = max(foodDist)
+        score += 5 / max(distToFurestFood, 1)
+
+        distanceToGhost = [manhattanDistance(ghostState.getPosition(), newPos) for ghostState in oldGhostStates if ghostState.scaredTimer == 0]
+        minDistanceToGhost = min(distanceToGhost) if len(distanceToGhost) > 0 else 0
+        score += - (25 ** (3 - min(3, minDistanceToGhost)))
+
+        return score
 
 def scoreEvaluationFunction(currentGameState):
     """
