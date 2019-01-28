@@ -140,6 +140,14 @@ class MultiAgentSearchAgent(Agent):
         self.index = 0 # Pacman is always agent index 0
         self.evaluationFunction = util.lookup(evalFn, globals())
         self.depth = int(depth)
+        self.pacmanIndex = 0
+
+    def getSuccessorsState(self, gameState, agentId):
+        actions = gameState.getLegalActions(agentId)
+        return [(gameState.generateSuccessor(agentId, action), action) for action in actions if action != "Stop"]
+
+    def isTerminal(self, gameState, depth):
+        return gameState.isWin() or gameState.isLose() or self.depth == depth
 
 class MinimaxAgent(MultiAgentSearchAgent):
     """
@@ -170,7 +178,42 @@ class MinimaxAgent(MultiAgentSearchAgent):
         Returns whether or not the game state is a losing state
         """
         "*** YOUR CODE HERE ***"
-        util.raiseNotDefined()
+        # util.raiseNotDefined()
+
+        bestAction, bestScore = self.maxValue(gameState, 0)
+        return bestAction
+
+    def maxValue(self, gameState, currentDepth):
+        if self.isTerminal(gameState, currentDepth):
+            return ('None', self.evaluationFunction(gameState))
+
+        bestScore = float('-inf')
+        for state, action in self.getSuccessorsState(gameState, 0):
+            _, minValue = self.minValue(state, currentDepth, 1)
+
+            if minValue > bestScore:
+                bestAction = action
+                bestScore = minValue
+
+        return bestAction, bestScore
+
+    def minValue(self, gameState, currentDepth, currentAgentIndex):
+        if currentAgentIndex >= gameState.getNumAgents():
+            return self.maxValue(gameState, currentDepth + 1)
+
+        if self.isTerminal(gameState, currentDepth):
+            return ('None', self.evaluationFunction(gameState))
+
+        bestScore = float('inf')
+        for state, action in self.getSuccessorsState(gameState, currentAgentIndex):
+            _, minValue = self.minValue(state, currentDepth, currentAgentIndex + 1)
+
+            if minValue < bestScore:
+                bestAction = action
+                bestScore = minValue
+
+        return bestAction, bestScore
+
 
 class AlphaBetaAgent(MultiAgentSearchAgent):
     """
