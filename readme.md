@@ -7,7 +7,7 @@
 
 ## [Assignment 1 - Search](https://courses.cs.washington.edu/courses/csep573/19wi/assignments/search.html)
 
-Provisional grades from [autograder.py](./Project1-Search/autograder.py)
+Provisional grades from [autograder.py](./Assignment1-Search/autograder.py)
 
 | Index | Name | Score |
 | :----:| ---- | :---: |
@@ -22,7 +22,7 @@ Provisional grades from [autograder.py](./Project1-Search/autograder.py)
 
 ## [Assignment 2 - Multi-Agent Search](https://courses.cs.washington.edu/courses/csep573/19wi/assignments/multi_agent.html)
 
-Provisional grades from [autograder.py](./Project2-MultiAgentSearch/autograder.py)
+Provisional grades from [autograder.py](./Assignment2-MultiAgentSearch/autograder.py)
 
 | Index | Name | Score |
 | :----:| ---- | :---: |
