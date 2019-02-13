@@ -5,7 +5,7 @@
 * Windows 10
 * [Python 3.6.8](https://www.python.org/downloads/release/python-368/)
 
-## Project 1 - Search
+## [Assignment 1 - Search](https://courses.cs.washington.edu/courses/csep573/19wi/assignments/search.html)
 
 Provisional grades from [autograder.py](./Project1-Search/autograder.py)
 
@@ -20,7 +20,7 @@ Provisional grades from [autograder.py](./Project1-Search/autograder.py)
 | [q7](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/7) | Eating All The Dots | 5/4 |
 | [q8](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/8) | Suboptimal Search | 3/3 |
 
-## Project 2 - Multi-Agent Search
+## [Assignment 2 - Multi-Agent Search](https://courses.cs.washington.edu/courses/csep573/19wi/assignments/multi_agent.html)
 
 Provisional grades from [autograder.py](./Project2-MultiAgentSearch/autograder.py)
 
