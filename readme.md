@@ -31,3 +31,16 @@ Provisional grades from [autograder.py](./Assignment2-MultiAgentSearch/autograde
 | [q3](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/11) | Alpha-Beta Pruning | 5/5 |
 | [q4](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/12) | Expectimax | 5/5 |
 | [q5](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/13) | Evaluation Function | 6/6 |
+
+## [Assignment 3 - Markov Decision Processes](https://courses.cs.washington.edu/courses/csep573/19wi/assignments/reinforcement_mdp.html)
+
+Provisional grades from [autograder.py](./Assignment3-MDP/autograder.py)
+
+| Index | Name | Score |
+| :----:| ---- | :---: |
+| [q1](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/15) | Value Iteration | 4/4 |
+| [q2](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/16) | Bridge Crossing Analysis | 1/1 |
+| [q3](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/17) | Policies | 5/5 |
+
+[Question 4 - RTDP](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/18)
+Output
