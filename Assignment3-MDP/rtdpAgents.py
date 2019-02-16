@@ -4,7 +4,7 @@
 # educational purposes provided that (1) you do not distribute or publish
 # solutions, (2) you retain this notice, and (3) you provide clear
 # attribution to UC Berkeley, including a link to http://ai.berkeley.edu.
-# 
+#
 # Attribution Information: The Pacman AI projects were developed at UC Berkeley.
 # The core projects and autograders were primarily created by John DeNero
 # (denero@cs.berkeley.edu) and Dan Klein (klein@cs.berkeley.edu).
@@ -12,8 +12,8 @@
 # Pieter Abbeel (pabbeel@cs.berkeley.edu). The RTDP question was added by
 # Gagan Bansal (bansalg@cs.washington.edu) and Dan Weld (weld@cs.washington.edu).
 
-
 import random
+
 import mdp, util
 
 from learningAgents import ValueEstimationAgent
@@ -23,7 +23,7 @@ class RTDPAgent(ValueEstimationAgent):
         * Please read learningAgents.py before reading this.*
 
         A RTDPAgent takes a Markov decision process
-        (see mdp.py) on initialization and runs rtdp 
+        (see mdp.py) on initialization and runs rtdp
         for a given number of iterations using the supplied
         discount factor.
     """
@@ -51,21 +51,42 @@ class RTDPAgent(ValueEstimationAgent):
 
         # Write rtdp code here
         "*** YOUR CODE HERE ***"
-        util.raiseNotDefined()
-    
+        # util.raiseNotDefined()
+        for state in self.mdp.getStates():
+            if self.mdp.isTerminal(state):
+                continue
+            x, y = state
+            cell = self.mdp.grid[x][y]
+            if type(cell) == int or type(cell) == float:
+                self.values[state] = int(cell)
+
+        for i in range(self.iterations):
+            startState = self.mdp.getStartState()
+
+            state = startState
+            step = 0
+            while not self.mdp.isTerminal(state) and step < max_iters:
+                step += 1
+
+                action = self.getAction(state)
+                self.updateValue(state, action)
+                state = self.pickNextState(state, action)
+
     def pickNextState(self, state, action):
         """
           Return the next stochastically simulated state.
         """
         "*** YOUR CODE HERE ***"
-        util.raiseNotDefined()
+        # util.raiseNotDefined()
+        return weighted_choice(self.mdp.getTransitionStatesAndProbs(state, action))
 
     def updateValue(self, state, action):
         """
           Update the value of given state.
         """
         "*** YOUR CODE HERE ***"
-        util.raiseNotDefined()
+        # util.raiseNotDefined()
+        self.values[state] = self.getQValue(state, action)
 
     def getHeuristicValue(self, state):
         """
@@ -73,7 +94,12 @@ class RTDPAgent(ValueEstimationAgent):
         """
         "*** YOUR CODE HERE ***"
         # your heuristic function here
-        util.raiseNotDefined()
+        # util.raiseNotDefined()
+        if self.mdp.isTerminal(state):
+            return 0
+        goalState = self.mdp.getGoalState()
+        goalReward = self.mdp.getGoalReward()
+        return goalReward * (self.discount ** util.manhattanDistance(state, goalState))
 
     def getValue(self, state):
         """
@@ -94,7 +120,9 @@ class RTDPAgent(ValueEstimationAgent):
           value function stored in self.values.
         """
         "*** YOUR CODE HERE ***"
-        util.raiseNotDefined()
+        # util.raiseNotDefined()
+        transition = self.mdp.getTransitionStatesAndProbs(state, action)
+        return sum([probability * (self.mdp.getReward(state, action, nextState) + self.discount * self.getValue(nextState)) for nextState, probability in transition])
 
     def computeActionFromValues(self, state):
         """
@@ -106,7 +134,13 @@ class RTDPAgent(ValueEstimationAgent):
           terminal state, you should return None.
         """
         "*** YOUR CODE HERE ***"
-        util.raiseNotDefined()
+        # util.raiseNotDefined()
+        if self.mdp.isTerminal(state):
+            return None
+
+        actions = self.mdp.getPossibleActions(state)
+        qValue_action_map = [(self.computeQValueFromValues(state, action), action) for action in actions]
+        return max(qValue_action_map, key = lambda item:item[0])[1]
 
     def getPolicy(self, state):
         return self.computeActionFromValues(state)
