@@ -1,0 +1,510 @@
+==================== Value Iteration ====================
+########## With 5 Iteration ##########
+Planning time: 0.05703258514404297 seconds
+Running 1000 Episodes
+Average Returns from Start State: 0.37045207642380135
+########## With 6 Iteration ##########
+Planning time: 0.06900143623352051 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7293248839639643
+########## With 7 Iteration ##########
+Planning time: 0.10604262351989746 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7619399075706084
+########## With 8 Iteration ##########
+Planning time: 0.08999752998352051 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.8375431468051766
+########## With 9 Iteration ##########
+Planning time: 0.09903097152709961 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.692354779453516
+########## With 10 Iteration ##########
+Planning time: 0.11203551292419434 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7727376105711152
+########## With 11 Iteration ##########
+Planning time: 0.1250014305114746 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.6444152211906102
+########## With 12 Iteration ##########
+Planning time: 0.13503766059875488 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.838179617480015
+########## With 13 Iteration ##########
+Planning time: 0.14899897575378418 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.806992307475011
+########## With 14 Iteration ##########
+Planning time: 0.15898609161376953 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7880694141768383
+########## With 15 Iteration ##########
+Planning time: 0.18698906898498535 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.777148430429918
+########## With 16 Iteration ##########
+Planning time: 0.18800091743469238 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.707765505926291
+########## With 17 Iteration ##########
+Planning time: 0.22908568382263184 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7863305416351394
+########## With 18 Iteration ##########
+Planning time: 0.2539854049682617 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.820017524378689
+########## With 19 Iteration ##########
+Planning time: 0.2629997730255127 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7479845350038774
+########## With 20 Iteration ##########
+Planning time: 0.23900651931762695 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7603346226687164
+########## With 21 Iteration ##########
+Planning time: 0.2760353088378906 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.765504772825712
+########## With 22 Iteration ##########
+Planning time: 0.262009859085083 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7630413947708448
+########## With 23 Iteration ##########
+Planning time: 0.26300859451293945 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7957697238733528
+########## With 24 Iteration ##########
+Planning time: 0.2889978885650635 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.789913818928126
+########## With 25 Iteration ##########
+Planning time: 0.2800412178039551 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.693047657705613
+########## With 26 Iteration ##########
+Planning time: 0.2940380573272705 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7520097106660675
+########## With 27 Iteration ##########
+Planning time: 0.33800482749938965 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7727775950580185
+########## With 28 Iteration ##########
+Planning time: 0.3720381259918213 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.712749535821859
+########## With 29 Iteration ##########
+Planning time: 0.3560161590576172 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7765095183190045
+########## With 30 Iteration ##########
+Planning time: 0.38303637504577637 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.77985591522145
+==================== RTDP ====================
+########## With 1 Iteration ##########
+Planning time: 0.0020020008087158203 seconds
+Running 1000 Episodes
+Average Returns from Start State: 0.1269673094791639
+########## With 2 Iteration ##########
+Planning time: 0.005972385406494141 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.583757956084585
+########## With 3 Iteration ##########
+Planning time: 0.00500178337097168 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.5347536255580376
+########## With 4 Iteration ##########
+Planning time: 0.003000497817993164 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.656882555197117
+########## With 5 Iteration ##########
+Planning time: 0.01099252700805664 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7920396505735767
+########## With 6 Iteration ##########
+Planning time: 0.004003047943115234 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.739404471654226
+########## With 7 Iteration ##########
+Planning time: 0.006029367446899414 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7165402494434927
+########## With 8 Iteration ##########
+Planning time: 0.022033214569091797 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7136035571315285
+########## With 9 Iteration ##########
+Planning time: 0.0070002079010009766 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.702112285860349
+########## With 10 Iteration ##########
+Planning time: 0.00799560546875 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7299019255758505
+########## With 11 Iteration ##########
+Planning time: 0.016002178192138672 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.617785056812964
+########## With 12 Iteration ##########
+Planning time: 0.010003089904785156 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.764055019271037
+########## With 13 Iteration ##########
+Planning time: 0.010002374649047852 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7143258798398437
+########## With 14 Iteration ##########
+Planning time: 0.01103663444519043 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7317208478719377
+########## With 15 Iteration ##########
+Planning time: 0.019036293029785156 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.777320833710212
+########## With 16 Iteration ##########
+Planning time: 0.013004779815673828 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.790188244097179
+########## With 17 Iteration ##########
+Planning time: 0.013983726501464844 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7639316201391977
+########## With 18 Iteration ##########
+Planning time: 0.02199864387512207 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7582921826146407
+########## With 19 Iteration ##########
+Planning time: 0.024016618728637695 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.41971413990703
+########## With 20 Iteration ##########
+Planning time: 0.01701807975769043 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.791947012434735
+########## With 21 Iteration ##########
+Planning time: 0.019034147262573242 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7218128197238074
+########## With 22 Iteration ##########
+Planning time: 0.017998695373535156 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.683857786681273
+########## With 23 Iteration ##########
+Planning time: 0.018033981323242188 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.733660325606333
+########## With 24 Iteration ##########
+Planning time: 0.019017457962036133 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7075275876127387
+########## With 25 Iteration ##########
+Planning time: 0.01903533935546875 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7074186947496237
+########## With 26 Iteration ##########
+Planning time: 0.03702092170715332 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.6395840835092645
+########## With 27 Iteration ##########
+Planning time: 0.021015405654907227 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.6953074348386896
+########## With 28 Iteration ##########
+Planning time: 0.044036149978637695 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.759754419276257
+########## With 29 Iteration ##########
+Planning time: 0.024034976959228516 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7855157087294224
+########## With 30 Iteration ##########
+Planning time: 0.022034168243408203 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7305870164651282
+########## With 31 Iteration ##########
+Planning time: 0.02503490447998047 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7896211440138514
+########## With 32 Iteration ##########
+Planning time: 0.024033069610595703 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.868877879755421
+########## With 33 Iteration ##########
+Planning time: 0.026000499725341797 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.8108652185523666
+########## With 34 Iteration ##########
+Planning time: 0.028032302856445312 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.73046708773163
+########## With 35 Iteration ##########
+Planning time: 0.028036832809448242 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.8094739244121887
+########## With 36 Iteration ##########
+Planning time: 0.03600025177001953 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.6305691820969406
+########## With 37 Iteration ##########
+Planning time: 0.029998302459716797 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.8371356481123815
+########## With 38 Iteration ##########
+Planning time: 0.026015520095825195 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.793289172312214
+########## With 39 Iteration ##########
+Planning time: 0.031037092208862305 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.754727163727827
+########## With 40 Iteration ##########
+Planning time: 0.028034210205078125 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7721391384355987
+########## With 41 Iteration ##########
+Planning time: 0.03200554847717285 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7544172233446313
+########## With 42 Iteration ##########
+Planning time: 0.058001041412353516 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7412290490210767
+########## With 43 Iteration ##########
+Planning time: 0.03299999237060547 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.691476423130595
+########## With 44 Iteration ##########
+Planning time: 0.035031795501708984 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.721075407778307
+########## With 45 Iteration ##########
+Planning time: 0.04198741912841797 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7581683051283155
+########## With 46 Iteration ##########
+Planning time: 0.0859987735748291 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.757895700133743
+########## With 47 Iteration ##########
+Planning time: 0.06603288650512695 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.664677462885142
+########## With 48 Iteration ##########
+Planning time: 0.04096412658691406 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7086912408926587
+########## With 49 Iteration ##########
+Planning time: 0.03796243667602539 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.702522447949939
+########## With 50 Iteration ##########
+Planning time: 0.03903460502624512 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7932057952829403
+==================== RTDP-Reverse ====================
+########## With 1 Iteration ##########
+Planning time: 0.0030336380004882812 seconds
+Running 1000 Episodes
+Average Returns from Start State: -0.3008191356398308
+########## With 2 Iteration ##########
+Planning time: 0.008018255233764648 seconds
+Running 1000 Episodes
+Average Returns from Start State: 1.1688539723167848
+########## With 3 Iteration ##########
+Planning time: 0.008974790573120117 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.762849676778284
+########## With 4 Iteration ##########
+Planning time: 0.008984565734863281 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.5093558798785884
+########## With 5 Iteration ##########
+Planning time: 0.012032747268676758 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7339858646392585
+########## With 6 Iteration ##########
+Planning time: 0.010999917984008789 seconds
+Running 1000 Episodes
+Average Returns from Start State: -0.6775168205806703
+########## With 7 Iteration ##########
+Planning time: 0.02802872657775879 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7821514162234946
+########## With 8 Iteration ##########
+Planning time: 0.014002084732055664 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.8417012771911754
+########## With 9 Iteration ##########
+Planning time: 0.02603459358215332 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7292676979823294
+########## With 10 Iteration ##########
+Planning time: 0.015032768249511719 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.791308266503147
+########## With 11 Iteration ##########
+Planning time: 0.030003786087036133 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.727678280364277
+########## With 12 Iteration ##########
+Planning time: 0.016999483108520508 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.6964420702204794
+########## With 13 Iteration ##########
+Planning time: 0.02302384376525879 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.678218135346751
+########## With 14 Iteration ##########
+Planning time: 0.01595759391784668 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7029727427294166
+########## With 15 Iteration ##########
+Planning time: 0.0359954833984375 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7836381021816647
+########## With 16 Iteration ##########
+Planning time: 0.017969846725463867 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.634170221022629
+########## With 17 Iteration ##########
+Planning time: 0.01899862289428711 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.729682022991588
+########## With 18 Iteration ##########
+Planning time: 0.027976512908935547 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7562091184615776
+########## With 19 Iteration ##########
+Planning time: 0.019443511962890625 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.510546301218523
+########## With 20 Iteration ##########
+Planning time: 0.03499889373779297 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7608417166748143
+########## With 21 Iteration ##########
+Planning time: 0.023999929428100586 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7131737564412113
+########## With 22 Iteration ##########
+Planning time: 0.031000137329101562 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7526284074609157
+########## With 23 Iteration ##########
+Planning time: 0.02302074432373047 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.760581479782753
+########## With 24 Iteration ##########
+Planning time: 0.0260312557220459 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.776948424132358
+########## With 25 Iteration ##########
+Planning time: 0.0510256290435791 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.752286200922821
+########## With 26 Iteration ##########
+Planning time: 0.02802753448486328 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7310126765612655
+########## With 27 Iteration ##########
+Planning time: 0.027001619338989258 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.723997016714928
+########## With 28 Iteration ##########
+Planning time: 0.02898716926574707 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.8565030729324934
+########## With 29 Iteration ##########
+Planning time: 0.029000520706176758 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7743426740816512
+########## With 30 Iteration ##########
+Planning time: 0.02803492546081543 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.6880978270952522
+########## With 31 Iteration ##########
+Planning time: 0.03399848937988281 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7051722342218154
+########## With 32 Iteration ##########
+Planning time: 0.060958147048950195 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7389480119732
+########## With 33 Iteration ##########
+Planning time: 0.03398728370666504 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.767858092613817
+########## With 34 Iteration ##########
+Planning time: 0.034998416900634766 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.8276412406517477
+########## With 35 Iteration ##########
+Planning time: 0.03299713134765625 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.708807749134691
+########## With 36 Iteration ##########
+Planning time: 0.03303790092468262 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.76775666939299
+########## With 37 Iteration ##########
+Planning time: 0.03603100776672363 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7784309932778517
+########## With 38 Iteration ##########
+Planning time: 0.03099656105041504 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.753194091271048
+########## With 39 Iteration ##########
+Planning time: 0.035035133361816406 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7326532895645093
+########## With 40 Iteration ##########
+Planning time: 0.039002418518066406 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.748269694584002
+########## With 41 Iteration ##########
+Planning time: 0.03800201416015625 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.6514563263098694
+########## With 42 Iteration ##########
+Planning time: 0.037999629974365234 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7662598775369873
+########## With 43 Iteration ##########
+Planning time: 0.03702569007873535 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7369763466489534
+########## With 44 Iteration ##########
+Planning time: 0.03800058364868164 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.82555529028695
+########## With 45 Iteration ##########
+Planning time: 0.04395174980163574 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7755737350402834
+########## With 46 Iteration ##########
+Planning time: 0.04702901840209961 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.698382902458949
+########## With 47 Iteration ##########
+Planning time: 0.043039560317993164 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.6898683114455046
+########## With 48 Iteration ##########
+Planning time: 0.06899714469909668 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.7217075105160844
+########## With 49 Iteration ##########
+Planning time: 0.04300189018249512 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.8342918183944312
+########## With 50 Iteration ##########
+Planning time: 0.04501533508300781 seconds
+Running 1000 Episodes
+Average Returns from Start State: 2.708733626165508
+
+==================== Plot Average Reward vs Time ====================
+Close the plot diagram to continue program
