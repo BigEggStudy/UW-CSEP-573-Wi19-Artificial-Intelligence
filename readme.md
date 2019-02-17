@@ -42,3 +42,15 @@ Provisional grades from [autograder.py](./Assignment3-MDP/autograder.py)
 | [Question 2 - Bridge Crossing Analysis](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/16) | 1/1 |
 | [Question 3 - Policies](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/17) | 5/5 |
 | [Question 4 - RTDP](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/18) | [Report](./Assignment3-MDP/rtdp.pdf) & [Output](./Assignment3-MDP/output.txt) |
+
+## [Assignment 4: Q-Learning Introduction](https://courses.cs.washington.edu/courses/csep573/19wi/assignments/reinforcement_qlearning.html)
+
+Provisional grades from [autograder.py](./Assignment3-MDP/autograder.py)
+
+| Questions | Score |
+| :-------- | :---: |
+| [Question 6 - Q-Learning](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/20) | 0/4 |
+| [Question 7 - Epsilon Greedy](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/21) | 0/2 |
+| [Question 8 - Bridge Crossing Revisited](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/22) | 0/1 |
+| [Question 9 - Q-Learning and Pacman](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/23) | 0/1 |
+| [Question 10 - Approximate Q-Learning](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/19) | 0/3 |
