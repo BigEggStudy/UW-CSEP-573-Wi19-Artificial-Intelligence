@@ -2,11 +2,11 @@ import sys, time
 
 import matplotlib.pyplot as plt
 
-def get_average_reward(agent, env):
+def get_average_reward(agent, env, discount):
     displayCallback = lambda x: None
     messageCallback = lambda x: None
     pauseCallback = lambda : None
-    decisionCallback = a.getAction
+    decisionCallback = agent.getAction
 
     print(f'Running {episodes_count} Episodes')
     returns = 0
@@ -48,42 +48,44 @@ if __name__ == '__main__':
 
     import valueIterationAgents, rtdpAgents
 
-    vi_time = []
-    vi_average_reward = []
+    vi_time = [0, 0, 0, 0]
+    vi_average_reward = [0, 0, 0, 0]
     rtdp_time = []
     rtdp_average_reward = []
 
     print('==================== Value Iteration ====================')
-    for iteration in range(20):
+    for iteration in range(5, 31):
+        print(f'########## With {iteration} Iteration ##########')
         startTime = time.time()
         a = valueIterationAgents.ValueIterationAgent(mdp, discount, iteration)
 
         planning_time = time.time() - startTime
         print(f'Planning time: {planning_time} seconds')
-        average_reward = get_average_reward(a, env)
+        average_reward = get_average_reward(a, env, discount)
 
         vi_time.append(planning_time)
         vi_average_reward.append(average_reward)
 
     print('==================== RTDP ====================')
-    for iteration in range(200):
+    for iteration in range(1, 101):
+        print(f'########## With {iteration} Iteration ##########')
         startTime = time.time()
         a = rtdpAgents.RTDPAgent(mdp, discount, iteration)
 
         planning_time = time.time() - startTime
         print(f'Planning time: {planning_time} seconds')
-        average_reward = get_average_reward(a, env)
+        average_reward = get_average_reward(a, env, discount)
 
         rtdp_time.append(planning_time)
         rtdp_average_reward.append(average_reward)
 
     print("")
-    print("### Plot Average Reward vs Time.")
+    print("==================== Plot Average Reward vs Time ====================")
     fig, ax = plt.subplots()
     ax.grid(True)
 
-    plt.plot(vi_time, vi_average_reward, label = 'Value Iteration')
-    plt.plot(rtdp_time, rtdp_average_reward, label = 'RTDP')
+    plt.scatter(rtdp_time, rtdp_average_reward, label = 'RTDP')
+    plt.scatter(vi_time, vi_average_reward, label = 'Value Iteration')
     plt.xlabel('Time')
     plt.ylabel('Average Reward')
     plt.title('Compare Algorithm')
