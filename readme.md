@@ -41,4 +41,4 @@ Provisional grades from [autograder.py](./Assignment3-MDP/autograder.py)
 | [Question 1 - Value Iteration](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/15) | 4/4 |
 | [Question 2 - Bridge Crossing Analysis](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/16) | 1/1 |
 | [Question 3 - Policies](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/17) | 5/5 |
-| [Question 4 - RTDP](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/18) | Output |
+| [Question 4 - RTDP](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/18) | [Report](./Assignment3-MDP/rtdp.pdf) & [Output](./Assignment3-MDP/output.txt) |
