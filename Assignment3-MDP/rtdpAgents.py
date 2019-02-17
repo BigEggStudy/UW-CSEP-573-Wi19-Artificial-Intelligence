@@ -27,7 +27,7 @@ class RTDPAgent(ValueEstimationAgent):
         for a given number of iterations using the supplied
         discount factor.
     """
-    def __init__(self, mdp, discount = 0.9, iterations = 100, max_iters=100):
+    def __init__(self, mdp, discount = 0.9, iterations = 100, max_iters=100, reverse=False):
         """
           Your value rtdp agent should take an mdp on
           construction, run the indicated number of iterations
@@ -62,15 +62,26 @@ class RTDPAgent(ValueEstimationAgent):
 
         for i in range(self.iterations):
             startState = self.mdp.getStartState()
-
             state = startState
             step = 0
-            while not self.mdp.isTerminal(state) and step < max_iters:
-                step += 1
+            if not reverse:
+                while not self.mdp.isTerminal(state) and step < max_iters:
+                    step += 1
 
-                action = self.getAction(state)
-                self.updateValue(state, action)
-                state = self.pickNextState(state, action)
+                    action = self.getAction(state)
+                    self.updateValue(state, action)
+                    state = self.pickNextState(state, action)
+            else:
+                stack = util.Stack()
+                while not self.mdp.isTerminal(state) and step < max_iters:
+                    step += 1
+                    action = self.getAction(state)
+                    stack.push((state, action))
+                    state = self.pickNextState(state, action)
+
+                while not stack.isEmpty():
+                    state, action = stack.pop()
+                    self.updateValue(state, action)
 
     def pickNextState(self, state, action):
         """
@@ -97,6 +108,12 @@ class RTDPAgent(ValueEstimationAgent):
         # util.raiseNotDefined()
         if self.mdp.isTerminal(state):
             return 0
+
+        x, y = state
+        cell = self.mdp.grid[x][y]
+        if type(cell) == int or type(cell) == float:
+            return 0
+
         goalState = self.mdp.getGoalState()
         goalReward = self.mdp.getGoalReward()
         return goalReward * (self.discount ** util.manhattanDistance(state, goalState))

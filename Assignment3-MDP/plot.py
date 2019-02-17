@@ -1,4 +1,4 @@
-import sys, time
+import sys, time, operator
 
 import matplotlib.pyplot as plt
 
@@ -48,10 +48,9 @@ if __name__ == '__main__':
 
     import valueIterationAgents, rtdpAgents
 
-    vi_time = [0, 0, 0, 0]
-    vi_average_reward = [0, 0, 0, 0]
-    rtdp_time = []
-    rtdp_average_reward = []
+    vi_data = []
+    rtdp_data = []
+    rtdp_reverse_data = []
 
     print('==================== Value Iteration ====================')
     for iteration in range(5, 31):
@@ -63,29 +62,47 @@ if __name__ == '__main__':
         print(f'Planning time: {planning_time} seconds')
         average_reward = get_average_reward(a, env, discount)
 
-        vi_time.append(planning_time)
-        vi_average_reward.append(average_reward)
+        vi_data.append((planning_time, average_reward))
 
     print('==================== RTDP ====================')
-    for iteration in range(1, 101):
+    for iteration in range(1, 51):
         print(f'########## With {iteration} Iteration ##########')
         startTime = time.time()
-        a = rtdpAgents.RTDPAgent(mdp, discount, iteration)
+        a = rtdpAgents.RTDPAgent(mdp, discount, iteration, reverse=False)
 
         planning_time = time.time() - startTime
         print(f'Planning time: {planning_time} seconds')
         average_reward = get_average_reward(a, env, discount)
 
-        rtdp_time.append(planning_time)
-        rtdp_average_reward.append(average_reward)
+        rtdp_data.append((planning_time, average_reward))
+
+    print('==================== RTDP-Reverse ====================')
+    for iteration in range(1, 51):
+        print(f'########## With {iteration} Iteration ##########')
+        startTime = time.time()
+        a = rtdpAgents.RTDPAgent(mdp, discount, iteration, reverse=True)
+
+        planning_time = time.time() - startTime
+        print(f'Planning time: {planning_time} seconds')
+        average_reward = get_average_reward(a, env, discount)
+
+        rtdp_reverse_data.append((planning_time, average_reward))
+
+    vi_data.sort(key=operator.itemgetter(0))
+    rtdp_data.sort(key=operator.itemgetter(0))
+    rtdp_reverse_data.sort(key=operator.itemgetter(0))
 
     print("")
     print("==================== Plot Average Reward vs Time ====================")
     fig, ax = plt.subplots()
     ax.grid(True)
 
-    plt.scatter(rtdp_time, rtdp_average_reward, label = 'RTDP')
-    plt.scatter(vi_time, vi_average_reward, label = 'Value Iteration')
+    rtdp_reverse_time, rtdp_reverse_average_reward = zip(*rtdp_reverse_data)
+    plt.plot(rtdp_reverse_time, rtdp_reverse_average_reward, label = 'RTDP-Reverse')
+    rtdp_time, rtdp_average_reward = zip(*rtdp_data)
+    plt.plot(rtdp_time, rtdp_average_reward, label = 'RTDP')
+    vi_time, vi_average_reward = zip(*vi_data)
+    plt.plot(vi_time, vi_average_reward, label = 'Value Iteration')
     plt.xlabel('Time')
     plt.ylabel('Average Reward')
     plt.title('Compare Algorithm')
