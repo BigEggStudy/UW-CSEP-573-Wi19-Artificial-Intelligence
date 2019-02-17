@@ -53,4 +53,4 @@ Provisional grades from [autograder.py](./Assignment3-MDP/autograder.py)
 | [Question 7 - Epsilon Greedy](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/21) | 2/2 |
 | [Question 8 - Bridge Crossing Revisited](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/22) | 1/1 |
 | [Question 9 - Q-Learning and Pacman](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/23) | 1/1 |
-| [Question 10 - Approximate Q-Learning](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/19) | 0/3 |
+| [Question 10 - Approximate Q-Learning](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/19) | 3/3 |
