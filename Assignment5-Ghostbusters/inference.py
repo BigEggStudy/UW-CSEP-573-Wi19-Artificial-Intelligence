@@ -475,7 +475,19 @@ class JointParticleFilter(ParticleFilter):
         """
         self.particles = []
         "*** YOUR CODE HERE ***"
-        raiseNotDefined()
+        # raiseNotDefined()
+
+        permutations = list(itertools.product(self.legalPositions, repeat=self.numGhosts))
+        random.shuffle(permutations)
+
+        particle_count = 0
+        while particle_count < self.numParticles:
+            for position in permutations:
+                if particle_count < self.numParticles:
+                    particle_count += 1
+                    self.particles.append(position)
+                else:
+                    break
 
     def addGhostAgent(self, agent):
         """
