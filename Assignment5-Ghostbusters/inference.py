@@ -4,7 +4,7 @@
 # educational purposes provided that (1) you do not distribute or publish
 # solutions, (2) you retain this notice, and (3) you provide clear
 # attribution to UC Berkeley, including a link to http://ai.berkeley.edu.
-# 
+#
 # Attribution Information: The Pacman AI projects were developed at UC Berkeley.
 # The core projects and autograders were primarily created by John DeNero
 # (denero@cs.berkeley.edu) and Dan Klein (klein@cs.berkeley.edu).
@@ -14,6 +14,7 @@
 
 import itertools
 import random
+import copy
 import busters
 import game
 
@@ -75,7 +76,13 @@ class DiscreteDistribution(dict):
         {}
         """
         "*** YOUR CODE HERE ***"
-        raiseNotDefined()
+        # raiseNotDefined()
+        total_value = float(self.total())
+        if total_value == 0:
+            return
+
+        for key in self.keys():
+            self[key] = self[key] / total_value
 
     def sample(self):
         """
@@ -99,8 +106,21 @@ class DiscreteDistribution(dict):
         0.0
         """
         "*** YOUR CODE HERE ***"
-        raiseNotDefined()
+        # raiseNotDefined()
+        total_value = float(self.total())
+        if total_value == 0:
+            return
 
+        sorted_items = sorted(self.items())
+        distribution = [value for _, value in sorted_items]
+        keys = [key for key, _ in sorted_items]
+
+        choice = random.random() * sum(distribution)
+        i, total = 0, distribution[0]
+        while choice > total:
+            i += 1
+            total += distribution[i]
+        return keys[i]
 
 class InferenceModule:
     """
@@ -348,7 +368,7 @@ class ParticleFilter(InferenceModule):
         Return the agent's current belief state, a distribution over ghost
         locations conditioned on all evidence and time passage. This method
         essentially converts a list of particles into a belief distribution.
-        
+
         This function should return a normalized distribution.
         """
         "*** YOUR CODE HERE ***"
