@@ -306,9 +306,21 @@ class ExactInference(InferenceModule):
         position is known.
         """
         "*** YOUR CODE HERE ***"
-        raiseNotDefined()
+        # raiseNotDefined()
 
-        self.beliefs.normalize()
+        # self.beliefs.normalize()
+
+        possible_beliefs = DiscreteDistribution()
+
+        noisy_distance = observation
+        pacman_position = gameState.getPacmanPosition()
+        for ghost_position in self.allPositions:
+            probability = self.getObservationProb(noisy_distance, pacman_position, ghost_position, self.getJailPosition())
+            if probability > 0:
+                possible_beliefs[ghost_position] = self.beliefs[ghost_position] * probability
+
+        possible_beliefs.normalize()
+        self.beliefs = possible_beliefs
 
     def elapseTime(self, gameState):
         """
