@@ -65,7 +65,7 @@ Provisional grades from [autograder.py](./Assignment5-Ghostbusters/autograder.py
 | [Question 1: Observation Probability](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/25) | 2/2 |
 | [Question 2: Exact Inference Observation](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/26) | 3/3 |
 | [Question 3: Exact Inference with Time Elapse](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/27) | 3/3 |
-| [Question 4: Exact Inference Full Test](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/28) | 0/2 |
+| [Question 4: Exact Inference Full Test](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/28) | 2/2 |
 | Question 5: Approximate Inference Initialization and Beliefs | 0/2 |
 | Question 6: Approximate Inference Observation | 0/3 |
 | Question 7: Approximate Inference with Time Elapse | 0/3 |
