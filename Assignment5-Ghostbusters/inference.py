@@ -146,7 +146,7 @@ class InferenceModule:
             jail = self.getJailPosition()
             gameState = self.setGhostPosition(gameState, pos, index + 1)
         except TypeError:
-            jail = self.getJailPosition(index)
+            jail = self.getJailPosition()
             gameState = self.setGhostPositions(gameState, pos)
         pacmanPosition = gameState.getPacmanPosition()
         ghostPosition = gameState.getGhostPosition(index + 1)  # The position you set
