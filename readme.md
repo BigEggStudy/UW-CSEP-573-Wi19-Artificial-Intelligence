@@ -62,7 +62,7 @@ Provisional grades from [autograder.py](./Assignment5-Ghostbusters/autograder.py
 | Questions | Score |
 | :-------- | :---: |
 | [Question 0: DiscreteDistribution Class](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/24) | 23/23 Test Passed |
-| [Question 1: Observation Probability](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/25) | 0/2 |
+| [Question 1: Observation Probability](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/25) | 2/2 |
 | [Question 2: Exact Inference Observation](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/26) | 0/3 |
 | [Question 3: Exact Inference with Time Elapse](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/27) | 0/3 |
 | [Question 4: Exact Inference Full Test](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/28) | 0/2 |
