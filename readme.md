@@ -45,7 +45,7 @@ Provisional grades from [autograder.py](./Assignment3-MDP/autograder.py)
 
 ## [Assignment 4: Q-Learning Introduction](https://courses.cs.washington.edu/courses/csep573/19wi/assignments/reinforcement_qlearning.html)
 
-Provisional grades from [autograder.py](./Assignment3-MDP/autograder.py)
+Provisional grades from [autograder.py](./Assignment4-QLearning/autograder.py)
 
 | Questions | Score |
 | :-------- | :---: |
@@ -54,3 +54,21 @@ Provisional grades from [autograder.py](./Assignment3-MDP/autograder.py)
 | [Question 8 - Bridge Crossing Revisited](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/22) | 1/1 |
 | [Question 9 - Q-Learning and Pacman](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/23) | 1/1 |
 | [Question 10 - Approximate Q-Learning](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/19) | 3/3 |
+
+## [Assignment 5: Ghostbusters](https://courses.cs.washington.edu/courses/csep573/19wi/assignments/ghostbusters.html)
+
+Provisional grades from [autograder.py](./Assignment5-Ghostbusters/autograder.py)
+
+| Questions | Score |
+| :-------- | :---: |
+| [Question 0: DiscreteDistribution Class](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/24) | 23/23 Test Passed |
+| [Question 1: Observation Probability](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/25) | 0/2 |
+| [Question 2: Exact Inference Observation](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/26) | 0/3 |
+| [Question 3: Exact Inference with Time Elapse](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/27) | 0/3 |
+| [Question 4: Exact Inference Full Test](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/28) | 0/2 |
+| Question 5: Approximate Inference Initialization and Beliefs | 0/2 |
+| Question 6: Approximate Inference Observation | 0/3 |
+| Question 7: Approximate Inference with Time Elapse | 0/3 |
+| Question 8: Joint Particle Filter Observation | 0/1 |
+| Question 9: Joint Particle Filter Observation | 0/3 |
+| Question 10: Joint Particle Filter Time Elapse and Full Test | 0/3 |
