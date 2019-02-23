@@ -147,7 +147,7 @@ class InferenceModule:
             jail = self.getJailPosition()
             gameState = self.setGhostPosition(gameState, pos, index + 1)
         except TypeError:
-            jail = self.getJailPosition()
+            jail = self.getJailPosition(index)
             gameState = self.setGhostPositions(gameState, pos)
         pacmanPosition = gameState.getPacmanPosition()
         ghostPosition = gameState.getGhostPosition(index + 1)  # The position you set
@@ -549,7 +549,11 @@ class JointParticleFilter(ParticleFilter):
 
             # now loop through and update each entry in newParticle...
             "*** YOUR CODE HERE ***"
-            raiseNotDefined()
+            # raiseNotDefined()
+
+            for ghost_index in range(self.numGhosts):
+                new_position_distribution = self.getPositionDistribution(gameState, oldParticle, ghost_index, self.ghostAgents[ghost_index])
+                newParticle[ghost_index] = new_position_distribution.sample()
 
             """*** END YOUR CODE HERE ***"""
             newParticles.append(tuple(newParticle))
