@@ -70,5 +70,5 @@ Provisional grades from [autograder.py](./Assignment5-Ghostbusters/autograder.py
 | [Question 6: Approximate Inference Observation](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/30) | 3/3 |
 | [Question 7: Approximate Inference with Time Elapse](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/31) | 3/3 |
 | [Question 8: Joint Particle Filter Observation](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/32) | 1/1 |
-| Question 9: Joint Particle Filter Observation | 0/3 |
+| [Question 9: Joint Particle Filter Observation](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/33) | 3/3 |
 | Question 10: Joint Particle Filter Time Elapse and Full Test | 0/3 |
