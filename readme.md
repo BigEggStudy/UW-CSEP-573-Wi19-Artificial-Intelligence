@@ -1,4 +1,4 @@
-# CSE P 573 Artificial Intelligence
+# CSE P 573 Introduction to Artificial Intelligence
 
 ## Environment
 
