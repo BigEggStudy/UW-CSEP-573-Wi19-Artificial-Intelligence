@@ -1,0 +1,26 @@
+# Test1
+# Test MinMDP(b) and its chosen action
+
+Environment: Tiger
+Belief: .8 .2
+Value: -301.0
+Action: 0 
+
+
+# Test2
+# Test MinMDP(b) and its chosen action
+
+Environment: Tiger
+Belief: .99 .01
+Value: -291.1
+Action: 2
+
+# Test3
+# Test MinMDP on 5000 runs
+
+Environment: Hallway
+Runs: 5000
+Reward: 0.045
+Error: .01 
+
+

@@ -1,0 +1,17 @@
+#Test1
+# Test AEMS2 on 200 runs
+
+Environment: Hallway 
+Time(sec): .001
+Runs: 200  
+Reward: 0.9
+
+# Test2:
+# Test AEMS2 on 200 runs
+
+Environment: RockSample_4_4 
+Time(sec): .1 
+Runs: 100
+Reward: 8
+
+

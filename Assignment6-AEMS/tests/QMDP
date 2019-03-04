@@ -1,0 +1,42 @@
+# Test1
+# Test QMDP(b) and its chosen action
+
+Environment: Tiger
+Belief: .2 .8
+Value: 28.98 
+Action: 0 
+
+
+# Test2
+# Test QMDP(b) and its chosen action
+
+Environment: Tiger
+Belief: .99 .01
+Value: 38.88 
+Action: 2
+
+# Test3
+# Test QMDP on 10000 runs
+
+Environment: Tiger
+Runs: 10000
+Reward: 1.96
+Error: .2 
+
+# Test4
+# Test QMDP on 5000 runs
+
+Environment: Hallway
+Runs: 5000
+Reward: .343 
+Error: .02 
+
+
+# Test5  
+# Test QMDP on 5000 runs
+
+Environment: RockSample_4_4
+Runs: 5000
+Reward: 3.46
+Error: .3
+
