@@ -24,26 +24,26 @@ class AEMS2(OnlineSolver):
         """
         return False #remove this after your implementation
 
-    
+
     def chooseAction(self):
         """
         *****Your code
         """
         return 0 #remove this after your implementation
 
-            
-        
+
+
     def updateRoot(self, action, observation):
         """
-        ***Your code 
+        ***Your code
         """
-        return None 
+        return None
 
 
 
 
 """
-****Your code 
-add any data structure, code, etc you want 
-We recommend to have a super class of Node and two subclasses of AndNode and OrNode 
+****Your code
+add any data structure, code, etc you want
+We recommend to have a super class of Node and two subclasses of AndNode and OrNode
 """
