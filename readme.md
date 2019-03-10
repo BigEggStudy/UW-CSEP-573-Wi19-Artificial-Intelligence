@@ -103,3 +103,14 @@ Provisional grades from [autograder.py](./Assignment5-Ghostbusters/autograder.py
                 @@@@@@@@@@@@@@@@@@@@@@@@@@
                     @@@@@@@@@@@@@@@@@@
 
+## [Assignment 6: POMDP - AEMS2](https://courses.cs.washington.edu/courses/csep573/19wi/assignments/pomdp.html)
+
+Provisional grades from [test.py](./Assignment6-AEMS/test.py)
+
+| Questions | Score |
+| :-------- | :---: |
+| [Question 1 - Understanding AEMS2](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/35) | Report |
+| [Question 2 - Bridge](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/36) | 0/5 |
+| [Question 3 - Bridge](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/37) | 0/3 |
+| [Question 4 - Bridge](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/38) | 0/2 |
+| [Question 5 - Playing with the time limit and heuristics](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/39) | Report & Output |
