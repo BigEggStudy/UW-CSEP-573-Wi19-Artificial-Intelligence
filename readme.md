@@ -109,7 +109,7 @@ Provisional grades from [test.py](./Assignment6-AEMS/test.py)
 
 | Questions | Score |
 | :-------- | :---: |
-| [Question 1 - Understanding AEMS2](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/35) | Report |
+| [Question 1 - Understanding AEMS2](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/35) | [Report](./Assignment6-AEMS/UnderstandingAEMS2.pdf) |
 | [Question 2 - Bridge](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/36) | 5/5 |
 | [Question 3 - Bridge](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/37) | 3/3 |
 | [Question 4 - Bridge](https://github.com/BigEggStudy/UW-CSEP-573-Wi19-Artificial-Intelligence/issues/38) | 0/2 |
