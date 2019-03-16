@@ -17,6 +17,10 @@ class QMDP(OfflineSolver):
 
         self.Q_value = np.zeros([len(self.pomdp.actions), len(self.pomdp.states)])
         self.values = np.zeros([len(self.pomdp.states)])
+        self.rewards = np.zeros([len(self.pomdp.actions), len(self.pomdp.states)])
+        for s_index, state in enumerate(self.pomdp.states):
+            for a_index, action in enumerate(self.pomdp.actions):
+                self.rewards[a_index, s_index] = np.max(np.dot(self.pomdp.T[a_index, s_index, :], self.pomdp.R[a_index, s_index, :, :]))
 
         time_step = 0
         max_abs_reward = np.max(np.abs(self.pomdp.R))
@@ -47,7 +51,7 @@ class QMDP(OfflineSolver):
     def updateQValueFromValues(self):
         for s_index, state in enumerate(self.pomdp.states):
             for a_index, action in enumerate(self.pomdp.actions):
-                self.Q_value[a_index, s_index] = np.max(np.dot(self.pomdp.T[a_index, s_index, :], self.pomdp.R[a_index, s_index, :, :]))  + self.pomdp.discount * np.dot(self.pomdp.T[a_index, s_index, :], self.values)
+                self.Q_value[a_index, s_index] = self.rewards[a_index, s_index]  + self.pomdp.discount * np.dot(self.pomdp.T[a_index, s_index, :], self.values)
             self.values[s_index] = np.max(self.Q_value[:, s_index])
 
 class MinMDP(OfflineSolver):
@@ -61,6 +65,11 @@ class MinMDP(OfflineSolver):
         self.values = np.zeros([len(self.pomdp.states)])
         self.minRewards = np.min(self.pomdp.R)
         self.minRewardsDiscount = self.pomdp.discount * (1 - 0) / (1 - self.pomdp.discount)
+
+        self.rewards = np.zeros([len(self.pomdp.actions), len(self.pomdp.states)])
+        for s_index, state in enumerate(self.pomdp.states):
+            for a_index, action in enumerate(self.pomdp.actions):
+                self.rewards[a_index, s_index] = np.max(np.dot(self.pomdp.T[a_index, s_index, :], self.pomdp.R[a_index, s_index, :, :]))
 
         time_step = 0
         max_abs_reward = np.max(np.abs(self.pomdp.R))
@@ -91,5 +100,5 @@ class MinMDP(OfflineSolver):
     def updateQValueFromValues(self, ):
         for s_index, state in enumerate(self.pomdp.states):
             for a_index, action in enumerate(self.pomdp.actions):
-                self.Q_value[a_index, s_index] = np.max(np.dot(self.pomdp.T[a_index, s_index, :], self.pomdp.R[a_index, s_index, :, :]))
+                self.Q_value[a_index, s_index] = self.rewards[a_index, s_index]
             self.values[s_index] = np.max(self.Q_value[:, s_index])
