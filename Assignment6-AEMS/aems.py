@@ -31,8 +31,11 @@ class AEMS2(OnlineSolver):
         *****Your code
         """
         # return False #remove this after your implementation
-        leaves = self.__getAllLeaves(self.root)
-        highestErrorLeaf = max([(leaf, self.__computeError(leaf, depth)) for (leaf, depth) in leaves], key = lambda n: n[1])[0]
+        leaves = [(leaf, self.__computeError(leaf, depth)) for (leaf, depth) in self.__getAllLeaves(self.root)]
+        highestErrorLeaf = max(leaves, key = lambda n: n[1])[0]
+        highestError = max(leaves, key = lambda n: n[1])[1]
+        if highestError < self.precision:
+            return False
 
         andNodes = []
         for a_index in range(len(self.pomdp.actions)):
