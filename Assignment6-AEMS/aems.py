@@ -26,16 +26,17 @@ class AEMS2(OnlineSolver):
         cur_belief = np.array(self.pomdp.prior).reshape(1, len(self.pomdp.prior))
         self.root = OrNode(cur_belief, self.lb_solver, self.ub_solver, 1, [], None)
 
-    def expandOneNode(self):
+    def expandOneNode(self, forceExpand = False):
         """
         *****Your code
         """
         # return False #remove this after your implementation
         leaves = [(leaf, self.__computeError(leaf, depth)) for (leaf, depth) in self.__getAllLeaves(self.root)]
         highestErrorLeaf = max(leaves, key = lambda n: n[1])[0]
-        highestError = max(leaves, key = lambda n: n[1])[1]
-        if highestError < self.precision:
-            return False
+        if not forceExpand:
+            highestError = max(leaves, key = lambda n: n[1])[1]
+            if highestError < self.precision:
+                return False
 
         andNodes = []
         for a_index in range(len(self.pomdp.actions)):
@@ -61,7 +62,7 @@ class AEMS2(OnlineSolver):
         """
         # return 0 #remove this after your implementation
         if len(self.root.children) == 0:
-            self.expandOneNode()
+            self.expandOneNode(forceExpand=True)
         return max([(action_index, andNode.upperBound) for action_index, andNode in enumerate(self.root.children)], key = lambda n: n[1])[0]
 
     def updateRoot(self, action, observation):
