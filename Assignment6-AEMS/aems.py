@@ -21,7 +21,7 @@ class AEMS2(OnlineSolver):
         for s_index in range(len(self.pomdp.states)):
             for a_index in range(len(self.pomdp.actions)):
                 for o_index in range(len(self.pomdp.observations)):
-                    self.rewards[a_index, s_index] = np.sum(np.dot(self.pomdp.T[a_index, s_index, :] * self.pomdp.O[a_index, :, o_index], self.pomdp.R[a_index, s_index, :, o_index]))
+                    self.rewards[a_index, s_index] += np.dot(self.pomdp.T[a_index, s_index, :] * self.pomdp.O[a_index, :, o_index], self.pomdp.R[a_index, s_index, :, o_index])
 
         cur_belief = np.array(self.pomdp.prior).reshape(1, len(self.pomdp.prior))
         self.root = OrNode(cur_belief, self.lb_solver, self.ub_solver, 1, [], None)
@@ -40,14 +40,16 @@ class AEMS2(OnlineSolver):
         andNodes = []
         for a_index in range(len(self.pomdp.actions)):
             probabilities = (highestErrorLeaf.belief @ self.pomdp.T[a_index, :, :] @ self.pomdp.O[a_index, :, :])[0]
+            reward = sum(highestErrorLeaf.belief @ self.rewards[a_index])
 
-            andNode = AndNode(a_index, self.pomdp.discount, sum(highestErrorLeaf.belief @ self.rewards[a_index]), [], probabilities, highestErrorLeaf)
+            andNode = AndNode(a_index, self.pomdp.discount, reward, [], probabilities, highestErrorLeaf)
             andNode.children = [OrNode(self.__updateBelief(highestErrorLeaf.belief, a_index, o_index), self.lb_solver, self.ub_solver, probabilities[o_index], [], andNode) for o_index, observation in enumerate(self.pomdp.observations)]
             andNode.backtrack()
             andNodes.append(andNode)
 
         highestErrorLeaf.children = andNodes
         highestErrorLeaf.backtrack()
+
         parent_node = highestErrorLeaf.parent
         while parent_node is not None:
             parent_node.backtrack()
