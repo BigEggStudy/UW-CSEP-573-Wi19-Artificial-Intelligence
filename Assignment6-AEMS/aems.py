@@ -92,12 +92,10 @@ class AEMS2(OnlineSolver):
         if len(orNode.children) == 0:
             return [(orNode, depth)]
 
-        orNodes = []
-        for andNode in orNode.children:
-            orNodes += andNode.children
+        andNode = max([(andNode, andNode.upperBound) for andNode in orNode.children], key = lambda n: n[1])[0]
 
         leaves = []
-        for subOrNode in orNodes:
+        for subOrNode in andNode.children:
             leaves += self.__getAllLeaves(subOrNode, depth + 1)
 
         return leaves
