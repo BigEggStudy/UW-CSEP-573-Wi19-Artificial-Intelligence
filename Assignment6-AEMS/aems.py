@@ -18,9 +18,9 @@ class AEMS2(OnlineSolver):
         You can add any attribute you want
         """
         self.rewards = np.zeros([len(self.pomdp.actions), len(self.pomdp.states)])
-        for s_index, state in enumerate(self.pomdp.states):
-            for a_index, action in enumerate(self.pomdp.actions):
-                for o_index, observation in enumerate(self.pomdp.observations):
+        for s_index in range(len(self.pomdp.states)):
+            for a_index in range(len(self.pomdp.actions)):
+                for o_index in range(len(self.pomdp.observations)):
                     self.rewards[a_index, s_index] = np.sum(np.dot(self.pomdp.T[a_index, s_index, :] * self.pomdp.O[a_index, :, o_index], self.pomdp.R[a_index, s_index, :, o_index]))
 
         cur_belief = np.array(self.pomdp.prior).reshape(1, len(self.pomdp.prior))
@@ -35,7 +35,7 @@ class AEMS2(OnlineSolver):
         highestErrorLeaf = max([(leaf, self.__computeError(leaf, depth)) for (leaf, depth) in leaves], key = lambda n: n[1])[0]
 
         andNodes = []
-        for a_index, action in enumerate(self.pomdp.actions):
+        for a_index in range(len(self.pomdp.actions)):
             probabilities = (highestErrorLeaf.belief @ self.pomdp.T[a_index, :, :] @ self.pomdp.O[a_index, :, :])[0]
 
             andNode = AndNode(a_index, self.pomdp.discount, sum(highestErrorLeaf.belief @ self.rewards[a_index]), [], probabilities, highestErrorLeaf)
@@ -63,8 +63,7 @@ class AEMS2(OnlineSolver):
         """
         ***Your code
         """
-        self.root = self.root.children[action]
-        self.root = self.root.children[observation]
+        self.root = self.root.children[action].children[observation]
 
     def __computeError(self, node, depth):
         error = node.getError()
