@@ -50,11 +50,11 @@ for model_name in ['RockSample_4_4', 'TagAvoid']:
     ax.grid(True)
 
     if model_name == 'RockSample_4_4':
-        plt.plot(x_data, average_reward_rock_minmdp, label = 'MinMDP')
         plt.plot(x_data, average_reward_rock_pbvi, label = 'PBVI')
-    elif model_name == 'PBVI':
-        plt.plot(x_data, average_reward_tag_minmdp, label = 'MinMDP')
+        plt.plot(x_data, average_reward_rock_minmdp, label = 'MinMDP')
+    elif model_name == 'TagAvoid':
         plt.plot(x_data, average_reward_tag_pbvi, label = 'PBVI')
+        plt.plot(x_data, average_reward_tag_minmdp, label = 'MinMDP')
 
     plt.xlabel('Time Limit')
     plt.ylabel('Average reward')
