@@ -43,7 +43,7 @@ for model_name in ['RockSample_4_4', 'TagAvoid']:
             elif model_name == 'TagAvoid' and lb_sover == 'PBVI':
                 average_reward_tag_pbvi.append(average_reward)
 
-x_data = [0.005, 0.01, 0.02, 0.05, 0.1, 0.200, 0.500]
+x_data = [0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.5]
 for model_name in ['RockSample_4_4', 'TagAvoid']:
     print(f'### Plot the Average Reward of {model_name}')
     fig, ax = plt.subplots()
@@ -58,7 +58,6 @@ for model_name in ['RockSample_4_4', 'TagAvoid']:
 
     plt.xlabel('Time Limit')
     plt.ylabel('Average reward')
-    plt.ylim(0.5, 1)
     plt.title(f'{model_name} Performance')
     plt.legend()
 
