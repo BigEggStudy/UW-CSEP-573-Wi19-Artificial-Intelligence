@@ -1,0 +1,89 @@
+=====================================
+Start evaluation with time limits: 0.005 second and 500 runs with MinMDP as lower bound in model RockSample_4_4
+Average Reward:  11.878012663851935
+=====================================
+Start evaluation with time limits: 0.01 second and 500 runs with MinMDP as lower bound in model RockSample_4_4
+Average Reward:  5.872868159021878
+=====================================
+Start evaluation with time limits: 0.02 second and 500 runs with MinMDP as lower bound in model RockSample_4_4
+Average Reward:  2.110595001754537
+=====================================
+Start evaluation with time limits: 0.05 second and 500 runs with MinMDP as lower bound in model RockSample_4_4
+Average Reward:  6.222406227262964
+=====================================
+Start evaluation with time limits: 0.1 second and 500 runs with MinMDP as lower bound in model RockSample_4_4
+Average Reward:  10.473328494859768
+=====================================
+Start evaluation with time limits: 0.2 second and 200 runs with MinMDP as lower bound in model RockSample_4_4
+Average Reward:  9.215206573303329
+=====================================
+Start evaluation with time limits: 0.5 second and 100 runs with MinMDP as lower bound in model RockSample_4_4
+Average Reward:  10.07580586386141
+=====================================
+Start evaluation with time limits: 0.005 second and 500 runs with PBVI as lower bound in model RockSample_4_4
+Average Reward:  12.283170287115995
+=====================================
+Start evaluation with time limits: 0.01 second and 500 runs with PBVI as lower bound in model RockSample_4_4
+Average Reward:  9.765582201551045
+=====================================
+Start evaluation with time limits: 0.02 second and 500 runs with PBVI as lower bound in model RockSample_4_4
+Average Reward:  5.345782413655991
+=====================================
+Start evaluation with time limits: 0.05 second and 500 runs with PBVI as lower bound in model RockSample_4_4
+Average Reward:  0.8178194938489292
+=====================================
+Start evaluation with time limits: 0.1 second and 500 runs with PBVI as lower bound in model RockSample_4_4
+Average Reward:  5.506114454052732
+=====================================
+Start evaluation with time limits: 0.2 second and 200 runs with PBVI as lower bound in model RockSample_4_4
+Average Reward:  9.963284282849001
+=====================================
+Start evaluation with time limits: 0.5 second and 100 runs with PBVI as lower bound in model RockSample_4_4
+Average Reward:  12.087644319844621
+=====================================
+Start evaluation with time limits: 0.005 second and 500 runs with MinMDP as lower bound in model TagAvoid
+Average Reward:  -13.948524759075422
+=====================================
+Start evaluation with time limits: 0.01 second and 500 runs with MinMDP as lower bound in model TagAvoid
+Average Reward:  -13.5208698315361
+=====================================
+Start evaluation with time limits: 0.02 second and 500 runs with MinMDP as lower bound in model TagAvoid
+Average Reward:  -14.281603722569985
+=====================================
+Start evaluation with time limits: 0.05 second and 500 runs with MinMDP as lower bound in model TagAvoid
+Average Reward:  -16.728418354939574
+=====================================
+Start evaluation with time limits: 0.1 second and 500 runs with MinMDP as lower bound in model TagAvoid
+Average Reward:  -17.528815208911357
+=====================================
+Start evaluation with time limits: 0.2 second and 200 runs with MinMDP as lower bound in model TagAvoid
+Average Reward:  -16.394293564823176
+=====================================
+Start evaluation with time limits: 0.5 second and 100 runs with MinMDP as lower bound in model TagAvoid
+Average Reward:  -13.404411914000168
+=====================================
+Start evaluation with time limits: 0.005 second and 500 runs with PBVI as lower bound in model TagAvoid
+Average Reward:  -14.029021829787943
+=====================================
+Start evaluation with time limits: 0.01 second and 500 runs with PBVI as lower bound in model TagAvoid
+Average Reward:  -13.868015110265116
+=====================================
+Start evaluation with time limits: 0.02 second and 500 runs with PBVI as lower bound in model TagAvoid
+Average Reward:  -14.132935130896012
+=====================================
+Start evaluation with time limits: 0.05 second and 500 runs with PBVI as lower bound in model TagAvoid
+Average Reward:  -14.323408076377861
+=====================================
+Start evaluation with time limits: 0.1 second and 500 runs with PBVI as lower bound in model TagAvoid
+Average Reward:  -18.34807112465858
+=====================================
+Start evaluation with time limits: 0.2 second and 200 runs with PBVI as lower bound in model TagAvoid
+Average Reward:  -17.80084036399528
+=====================================
+Start evaluation with time limits: 0.5 second and 100 runs with PBVI as lower bound in model TagAvoid
+Average Reward:  -14.046217864384616
+### Plot the Average Reward of RockSample_4_4
+Close the plot diagram to continue program
+### Plot the Average Reward of TagAvoid
+No handles with labels found to put in legend.
+Close the plot diagram to continue program
